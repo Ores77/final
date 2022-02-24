@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WorkController;
+use App\Http\Controllers\MakeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,4 +42,4 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
     });
 });
-Route::get('/workers', [WorkController::class, 'work']);
+Route::resource('/workers', MakeController::class);
